@@ -12,6 +12,10 @@
     let tableData = table()
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#table", data);
+
+    let treemapData = treemap()
+      .selectionDispatcher(d3.dispatch(dispatchString))
+      ("#treemap", data);
   });
 
 })());
