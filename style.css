@@ -21,6 +21,38 @@ h1, h2, h3 {
   height: 100%;
 }
 
+table {
+	font-size: 14px;
+	border-collapse: separate;
+	/* vertical | horizontal */
+	border-spacing: 0 0;
+	text-align: right;
+	margin: 0 auto;
+}
+  
+th {
+	  background-color: #69b3a2;
+	  color: white;
+}
+  
+th, td {
+	/* vertical | horizontal */
+	padding: 0 8px;
+	border: 1px solid black;
+}
+  
+  /* Don't also do text drag selection */
+table.text-unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;
