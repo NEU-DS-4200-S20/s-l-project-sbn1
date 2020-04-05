@@ -1,4 +1,3 @@
-
 ((() => {
 
   d3.csv("data/vendors.csv", (data) => {

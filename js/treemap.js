@@ -1,6 +1,6 @@
 // initialize treemap
 function treemap() {
-
+    // ATTEMPT 1: appending to vis-holder svg 
     // CODE FROM: https://www.d3-graph-gallery.com/graph/treemap_json.html
 
     // set the dimensions and margins of the graph
