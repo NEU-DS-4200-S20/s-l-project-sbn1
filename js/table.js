@@ -73,7 +73,7 @@ function table() {
         function selectRow() {
             d3.select(this).attr("class", "selected");
 
-            let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+            let dispatchString = Object.getOwnPropertyNames(dispatcher.k)[0];
 
             dispatcher.call(
                 dispatchString,
@@ -83,7 +83,7 @@ function table() {
         }
 
         function endSelection() {
-            let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+            let dispatchString = Object.getOwnPropertyNames(dispatcher.k)[0];
             tableBody.selectAll(".selected").attr("class", "");
             dispatcher.call(dispatchString, this, []);
         }
@@ -98,9 +98,9 @@ function table() {
     }
 
     // Gets or sets the dispatcher we use for selection events
-    chart.selectionDispatcher = function (_) {
+    chart.selectionDispatcher = function (k) {
         if (!arguments.length) return dispatcher;
-        dispatcher = _;
+        dispatcher = k;
         return chart;
     };
 

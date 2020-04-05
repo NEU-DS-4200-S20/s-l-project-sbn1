@@ -37,8 +37,12 @@ function treemap() {
         // read json data
         d3.json("data/vendors.json", function (data) {
 
+            // create hierarchy
+            var groupByBusiness = _.nest(data, ["Type of Business (Exhibitor/Vendor)"]);
+            console.log(JSON.stringify(groupByBusiness));
+
             // Give the data to this cluster layout:
-            var root = d3.hierarchy(data).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
+            var root = d3.hierarchy(groupByBusiness).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
 
             // Then d3.treemap computes the position of each element of the hierarchy
             d3.treemap()
@@ -76,9 +80,9 @@ function treemap() {
     }
 
     // Gets or sets the dispatcher we use for selection events
-    chart.selectionDispatcher = function (_) {
+    chart.selectionDispatcher = function (k) {
         if (!arguments.length) return dispatcher;
-        dispatcher = _;
+        dispatcher = k;
         return chart;
     };
 
