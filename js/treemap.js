@@ -71,5 +71,16 @@ function treemap() {
                 .attr("font-size", "15px")
                 .attr("fill", "white")
         })
+
+        return chart;
     }
+
+    // Gets or sets the dispatcher we use for selection events
+    chart.selectionDispatcher = function (_) {
+        if (!arguments.length) return dispatcher;
+        dispatcher = _;
+        return chart;
+    };
+
+    return chart;
 }
