@@ -35,7 +35,7 @@ function treemap() {
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // read json data
-        d3.json("data/vendors.csv", function (data) {
+        d3.json("data/vendors.json", function (data) {
 
             // Give the data to this cluster layout:
             var root = d3.hierarchy(data).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
