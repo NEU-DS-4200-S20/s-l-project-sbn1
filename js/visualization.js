@@ -1,4 +1,18 @@
 ((() => {
+    // requiring certain libraries?
+    // CODE FROM : https://requirejs.org/docs/node.html
+    var requirejs = require(['./lib/require.js'], 
+    function(require) {});
+
+    // requirejs.config({
+    //     //Pass the top-level main.js/index.js require
+    //     //function to requirejs so that node modules
+    //     //are loaded relative to the top-level JS file.
+    //     nodeRequire: require
+    // });
+
+    var _ = requirejs(['./lib/underscore/underscore.js'], 
+    function(underscore) {});
 
   d3.json("data/vendors.json", (data) => {
     // General event type for selections, used by d3-dispatch
@@ -12,9 +26,16 @@
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#table", data);
 
+
+    var groupByBusiness = _.nest(data, ["Type of Business (Exhibitor/Vendor)"]);
+      console.log(JSON.stringify(groupByBusiness));
+
+    // Create a treemap given the following: 
+    // a dispatcher (d3-dispatch) for selection events; 
+    // a div id selector to put our treemap in; and the data to use.
     let treemapData = treemap()
       .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#treemap", data);
+      ("#treemap", groupByBusiness);
   });
 
 })());
