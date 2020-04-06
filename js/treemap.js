@@ -33,7 +33,7 @@ function treemap() {
             // Then d3.treemap computes the position of each element of the hierarchy
             d3.treemap()
                 .size([width, height])
-                .padding(2)
+                .padding(1)
                 (root);
 
             // color!
@@ -58,7 +58,7 @@ function treemap() {
                 .attr('y', function (d) { return d.y0; })
                 .attr('width', function (d) { return d.x1 - d.x0; })
                 .attr('height', function (d) { return d.y1 - d.y0; })
-                .style("stroke", "black")
+                .style("stroke", "black", "10px") // now there's no border???
                 .style("fill", (d) => color(d.parent.parent.data.name))
 
                 //tool tip doesn't work yet
