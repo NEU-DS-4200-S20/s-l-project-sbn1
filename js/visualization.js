@@ -11,8 +11,8 @@
     //     nodeRequire: require
     // });
 
-    var _ = requirejs(['./lib/underscore/underscore.js'], 
-    function(underscore) {});
+    var _ = requirejs(['./lib/underscore/underscore.js', './lib/underscore/underscore.nest.js', './lib/underscore/underscore.nest.min.js'], 
+    function(underscore, nest, min) {});
 
   d3.json("data/vendors.json", (data) => {
     // General event type for selections, used by d3-dispatch
