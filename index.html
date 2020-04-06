@@ -41,14 +41,28 @@
     
     <h1>Motivation</h1>
     
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
+    <p>As stated in our team charter, our goal is to develop visualizations for the Sustainable Business 
+      Network’s Food Festival attendees, vendors, and/or planners. One of SBN’s goals is to increase the 
+      numbers of buyers present at the event. During our interview with the SBN representative, we learned 
+      that their strategy is to market the experience, opening up the festival to more food producers and 
+      consumers. In doing so, the organization noted the concerns and barriers that buyers face, including 
+      size/capacity and  certifications.  Keeping this in mind, the organization is striving to be inclusive 
+      of the size of both vendors and buyers. Aside from size and capacity, buyers are also looking for 
+      specific certifications or practices for the produce they are purchasing. As we’ll see in the data, 
+      this includes Organic Certification, GAP Certification, and focus on heirloom varieties or heritage 
+      breeds.</p> 
+
+    <p>The main take away from the interview was that SBN needed a visualization that allows for vendors 
+      to understand if the Food Festival is what they are looking for. This leads us to a few guiding questions. 
+      How do we show potential buyers what vendors are present? How do we visualize information about vendors? 
+      Specifically, what can we do to represent the capacities and certifications of the vendors?</p>
+      
 
     
     <h1>Visualization</h1>
     
-    <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
+    <p>What we have done for Sprint 1. We have a static version of our table and a singluar implementation 
+      of the treemap.</p>
     
   </div>
   
@@ -76,16 +90,51 @@
     <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
+    <p>There were three separate datasets provided to us from SBN. One CSV contained information about the buyers. 
+      Two CSVs contained data from the vendors, separated by whether the vendor had specialty items. </p>
 
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+    <p>Our project focused on the specialty vendor data. This dataset contained 20 fields and 34 entries. 
+      The fields included categorical values like position of the person filling out the application, the 
+      type of business, certifications/special practices, and types of products and crops; ordinal values 
+      like the volume produced and the volume of capacity to sell to new accounts; and continuous quantitative 
+      values like percent of products sold to wholesale and goal percent of products sold to wholesale. </p>
+
+    <p>Once we decided on the principal visualization we were creating, a tree-map, we added additional 
+      fields to aggregate and/or summarize certain fields. Specifically, we categorized the crops and products 
+      into “plants”, “produce”, and “value-added products”, combinations of those categories, and “other”. 
+      Similarly, we limited the number of different values in the certifications field. We categorized items 
+      if they had multiple certifications, and otherwise kept other values including singular certifications, 
+      “other”, and “not applicable”. We needed to add these two fields to avoid excessively small areas in 
+      our tree-map resulting from the various combinations of products and of certifications. We also wanted 
+      to aggregate the data from the capacities that vendors were willing to take on from new buyers. 
+      Instead of having each season be a level within the hierarchy, we made an aggregate field that showed 
+      the max amount a vendor was capable of within a season.</p>
 
     <h1>Task Analysis</h1>
 
-    <p><em>Summary of task table.</em></p>
+    <p>Sustainable Business Network is looking for a visualization that will give suppliers and buyers an 
+      idea of whether they want to take part in the trade show. Summarizing and presenting the registration 
+      data will encourage trade show attendance by informing attendees about vendors. The primary consumer 
+      of the visualization would be those who are thinking about attending the trade show. SBN wants to 
+      attract more buyers by visualizing the vendor information.</p>
 
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
+    <p>Before we decided the specific visualization we were creating, we looked at the various potential 
+      tasks. The most important domain task was to categorize vendors by types of food they produce, the size 
+      of their farm, and the certifications they have. To do this, we have summarized the data as the 
+      analytical task, allow for the user to browse the data as the search task, and present this in our 
+      tree-map and linked table as the analyze task. The completion of this task would also aid in the goals 
+      of our second domain task: analyzing what types of vendors were unrepresented and what foods buyers 
+      were looking for. The goals of this task were to identify the categories and to provide the user 
+      capabilities to locate and derive information from what is missing. Because this information isn’t 
+      explicitly given to us, the process for addressing this domain task was based more on what isn’t shown 
+      in the visualization. A vendor can look at the visualization and realize that nobody else currently in 
+      the trade show hits the same niche. This can make a vendor more inclined to apply next year.</p>
 
+    <p>We had two other domain tasks that did not get represented by our visualization due to our focus on 
+      vendors. One task was to classify buyers by consumption (quantity and type). To do this we would need 
+      to summarize the data, provide browsing ability, and present this in our visualization. A third task 
+      was to visualize the location of vendors. This required comparing the values, providing browsing 
+      ability, and presenting this in our visualization.</p>
     <h1>Design Process</h1>
     
     <p><em>Sketches and design choices to justify final visualization.</em></p>
@@ -109,6 +158,8 @@
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li><a href="http://github.com/iros/underscore.nest/">Underscore.Nest</a> by Irene Ros.</li>
+      <li><a href="https://underscorejs.org">Underscore.js Javascript Library</a> by Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors.</li>
     </ul>
     
   </div>
