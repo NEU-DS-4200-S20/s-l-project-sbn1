@@ -43,7 +43,7 @@ function treemap() {
 
             //tool tip
             const toolTip = d3
-            .select("#container")
+            .select(selector)
             .append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
