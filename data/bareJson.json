@@ -1,0 +1,274 @@
+[
+  {
+    "0": 1,
+    "Type of Business (Exhibitor/Vendor)": "Non-Massachusetts Specialty Crop Farm",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "Less than a pallet",
+    "value": 1
+  },
+  {
+    "0": 2,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Plants",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 3,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 4,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "3-5 pallets",
+    "value": 1
+  },
+  {
+    "0": 5,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 6,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 7,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Other",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 8,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "More than 20 pallets",
+    "value": 1
+  },
+  {
+    "0": 9,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "3-5 pallets",
+    "value": 1
+  },
+  {
+    "0": 10,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 11,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Other",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 12,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "GAP Certification",
+    "Max volume capable of adding in a season": "Less than a pallet",
+    "value": 1
+  },
+  {
+    "0": 13,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 14,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "3-5 pallets",
+    "value": 1
+  },
+  {
+    "0": 15,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Other",
+    "Max volume capable of adding in a season": "More than 20 pallets",
+    "value": 1
+  },
+  {
+    "0": 16,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "3-5 pallets",
+    "value": 1
+  },
+  {
+    "0": 17,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "GAP Certification",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 18,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 19,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "5-10 pallets",
+    "value": 1
+  },
+  {
+    "0": 20,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Focus on heirloom varieties or heritage breeds",
+    "Max volume capable of adding in a season": "10-20 pallets",
+    "value": 1
+  },
+  {
+    "0": 21,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Plants",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "Less than a pallet",
+    "value": 1
+  },
+  {
+    "0": 22,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "More than 20 pallets",
+    "value": 1
+  },
+  {
+    "0": 23,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "More than 20 pallets",
+    "value": 1
+  },
+  {
+    "0": 24,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "Other",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 25,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max volume capable of adding in a season": "10-20 pallets",
+    "value": 1
+  },
+  {
+    "0": 26,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 27,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Plants",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "1-3 pallets",
+    "value": 1
+  },
+  {
+    "0": 28,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 29,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "Less than a pallet",
+    "value": 1
+  },
+  {
+    "0": 30,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Other",
+    "Max volume capable of adding in a season": "More than 20 pallets",
+    "value": 1
+  },
+  {
+    "0": 31,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Not Applicable",
+    "Max volume capable of adding in a season": "Less than a pallet",
+    "value": 1
+  },
+  {
+    "0": 32,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Other",
+    "Max volume capable of adding in a season": "Not Applicable",
+    "value": 1
+  },
+  {
+    "0": 33,
+    "Type of Business (Exhibitor/Vendor)": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Focus on heirloom varieties or heritage breeds",
+    "Max volume capable of adding in a season": "Less than a pallet",
+    "value": 1
+  },
+  {
+    "0": 34,
+    "Type of Business (Exhibitor/Vendor)": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Organic Certification",
+    "Max volume capable of adding in a season": "3-5 pallets",
+    "value": 1
+  }
+]

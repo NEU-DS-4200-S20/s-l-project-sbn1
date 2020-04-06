@@ -35,12 +35,6 @@ function treemap() {
         svg = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        // read json data
-        d3.json("data/vendors.json", function (data) {
-
-            // create hierarchy
-            //var groupByBusiness = _.nest(data, ["Type of Business (Exhibitor/Vendor)"]);
-            //console.log(JSON.stringify(groupByBusiness));
 
             // Give the data to this cluster layout:
             var root = d3.hierarchy(data).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
@@ -75,7 +69,6 @@ function treemap() {
                 .text(function (d) { return d.data.name })
                 .attr("font-size", "15px")
                 .attr("fill", "white")
-        })
 
         return chart;
     }
