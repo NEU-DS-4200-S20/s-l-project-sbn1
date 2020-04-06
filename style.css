@@ -22,7 +22,7 @@ h1, h2, h3 {
 }
 
 table {
-	font-size: 14px;
+	font-size: 8px;
 	border-collapse: separate;
 	/* vertical | horizontal */
 	border-spacing: 0 0;
@@ -31,7 +31,7 @@ table {
 }
   
 th {
-	  background-color: #69b3a2;
+	  background-color: #66b447;
 	  color: white;
 }
   

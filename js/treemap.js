@@ -17,15 +17,6 @@ function treemap() {
         selectableElements = d3.select(null),
         dispatcher;
 
-    // append the svg object to the body of the page
-    // var svg = d3.select("#vis-holder")
-    //     .append("svg")
-    //     .attr("width", width + margin.left + margin.right)
-    //     .attr("height", height + margin.top + margin.bottom)
-    //     .append("g")
-    //     .attr("transform",
-    //         "translate(" + margin.left + "," + margin.top + ")");
-
     function chart(selector, data) {
         let svg = d3.select(selector)
             .append("svg")
@@ -43,7 +34,19 @@ function treemap() {
             d3.treemap()
                 .size([width, height])
                 .padding(2)
-                (root)
+                (root);
+
+            // color!
+            var color = d3.scaleOrdinal()
+            .domain(["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"])
+            .range(["#66b447","#9f2b68","#f2b400"]);
+
+            //tool tip
+            const toolTip = d3
+            .select("#container")
+            .append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
 
             // use this information to add rectangles:
             svg
@@ -56,7 +59,29 @@ function treemap() {
                 .attr('width', function (d) { return d.x1 - d.x0; })
                 .attr('height', function (d) { return d.y1 - d.y0; })
                 .style("stroke", "black")
-                .style("fill", "slateblue")
+                .style("fill", (d) => color(d.parent.parent.data.name))
+
+                //tool tip doesn't work yet
+                .on("mouseover", (d, i) => {
+                    toolTip
+                      .transition()
+                      .duration(0)
+                      .style("opacity", 0.8);
+                    toolTip
+                      .attr("id", "tooltip")
+                      .html(function() {
+                      return "<span>" + "Number of vendors: " + d.data.value + "</span>";
+                    })
+                      .style("left", d3.event.pageX - 87.5 + "px") // -87.5 is half width of tooltip in css
+                      .style("top", d3.event.pageY - 75 + "px")
+                      .attr("data-value", d.data.value);
+                  })
+                   .on("mouseout", function(d) {
+                    toolTip
+                      .transition()
+                      .duration(0)
+                      .style("opacity", 0);
+                   });
 
             // and to add the text labels
             svg
@@ -64,11 +89,25 @@ function treemap() {
                 .data(root.leaves())
                 .enter()
                 .append("text")
-                .attr("x", function (d) { return d.x0 + 5 })    // +10 to adjust position (more right)
-                .attr("y", function (d) { return d.y0 + 20 })    // +20 to adjust position (lower)
-                .text(function (d) { return d.data.name })
-                .attr("font-size", "15px")
-                .attr("fill", "white")
+                .selectAll('tspan')
+                .data(d => {
+                    var t = d.data["Type of Business (Exhibitor/Vendor)"] + ", " + d.data["Product Category"];
+                    return t.split(/(?=[A-Z][^A-Z])/g) // split the text
+                        .map(v => {
+                            return {
+                                text: v,
+                                x0: d.x0,                        // keep x0 reference
+                                y0: d.y0                         // keep y0 reference
+                            }
+                        });
+                })
+                .enter()
+                .append('tspan')
+                .attr("x", (d) => d.x0 + 5)
+                .attr("y", (d, i) => d.y0 + 15 + (i * 10)) 
+                .text(function (d) { return d.text;})
+                .attr("font-size", "3px")
+                .attr("fill", "white");
 
         return chart;
     }

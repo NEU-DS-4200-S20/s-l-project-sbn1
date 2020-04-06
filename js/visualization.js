@@ -10,7 +10,7 @@
     // });
 
   d3.json("data/vendors.json", (data) => {
-    d3.json("data/vendorsNested.json", (groupByBusiness) => {
+    d3.json("data/copy.json", (groupByBusiness) => {
       // General event type for selections, used by d3-dispatch
       // https://github.com/d3/d3-dispatch
       const dispatchString = "selectionUpdated";
