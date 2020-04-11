@@ -70,7 +70,7 @@ function treemap() {
             .on("mousemove", function (d) {
                 tool.style("left", d3.event.pageX + 10 + "px")
                 tool.style("top", d3.event.pageY - 20 + "px")
-                tool.style("display", "inline-block");
+                tool.style("opacity", 1);
                 tool.html(function() {
                     return "<span>" + "Number of vendors: " + d.data.value + "</span>";
                 //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
@@ -79,7 +79,7 @@ function treemap() {
                 tool
                     .transition()
                     .duration(0)
-                    .style("display", none);
+                    .style("opacity", 0);
             });
 
         // .on("mousemove", (d, i) => {
