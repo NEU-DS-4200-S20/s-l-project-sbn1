@@ -41,15 +41,16 @@ function treemap() {
             .domain(["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"])
             .range(["#66b447", "#9f2b68", "#f2b400"]);
 
-        //tool tip
+        //tooltip
         const tool = d3
             //.select(selector)
             .select("body")
             .append("div")
             //.attr("class", "tooltip")
-            .attr("id", "tooltip")
+            .attr("class", "tooltip");
             //.style("opacity", 0);
-            .attr("style", "position: absolute; opacity: 0");
+            //.attr("style", "position: absolute; opacity: 0");
+            //.attr("style");
 
         // use this information to add rectangles:
         svg
@@ -65,38 +66,42 @@ function treemap() {
             .style("fill", (d) => color(d.parent.parent.data.name))
 
 
-            // // from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
-            // .on("mousemove", function (d, i) {
-            //     tool.style("left", d3.event.pageX + 10 + "px")
-            //     tool.style("top", d3.event.pageY - 20 + "px")
-            //     tool.style("display", "inline-block");
-            //     tool.html(function() {
-            //         return "<span>" + "Number of vendors: " + d.data.value + "</span>";
-            //     //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
-            // }).on("mouseout", function (d) {
-            //     tool.style("display", "none");
-            // });
-
-        .on("mousemove", (d, i) => {
-            tool
-              .transition()
-              .duration(0)
-              .style("opacity", 0.8);
-            tool
-              .attr("id", "tooltip")
-              .html(function() {
-              return "<span>" + "Number of vendors: " + d.data.value + "</span>";
+            // from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
+            .on("mousemove", function (d) {
+                tool.style("left", d3.event.pageX + 10 + "px")
+                tool.style("top", d3.event.pageY - 20 + "px")
+                tool.style("display", "inline-block");
+                tool.html(function() {
+                    return "<span>" + "Number of vendors: " + d.data.value + "</span>";
+                //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
             })
-              .style("left", d3.event.pageX - 87.5 + "px") // -87.5 is half width of tooltip in css
-              .style("top", d3.event.pageY - 75 + "px")
-              .attr("data-value", d.data.value);
-          })
-           .on("mouseout", function(d) {
-            tool
-              .transition()
-              .duration(0)
-              .style("opacity", 0);
-           });
+        }).on("mouseout", function (d) {
+                tool
+                    .transition()
+                    .duration(0)
+                    .style("display", none);
+            });
+
+        // .on("mousemove", (d, i) => {
+        //     tool
+        //       .transition()
+        //       .duration(0)
+        //       .style("opacity", 0.8);
+        //     tool
+        //       .attr("id", "tooltip")
+        //       .html(function() {
+        //       return "<span>" + "Number of vendors: " + d.data.value + "</span>";
+        //     })
+        //       .style("left", d3.event.pageX - 87.5 + "px") // -87.5 is half width of tooltip in css
+        //       .style("top", d3.event.pageY - 75 + "px")
+        //       .attr("data-value", d.data.value);
+        //   })
+        //    .on("mouseout", function(d) {
+        //     tool
+        //       .transition()
+        //       .duration(0)
+        //       .style("opacity", 0);
+        //    });
 
         // and to add the text labels
         svg
