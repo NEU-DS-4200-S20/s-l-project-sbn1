@@ -41,6 +41,14 @@ function treemap() {
             .domain(["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"])
             .range(["#66b447", "#9f2b68", "#f2b400"]);
 
+        var legColors = ["#66b447", "#9f2b68", "#f2b400"],
+            legLabels = ["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"];
+
+        var legend = d3.select(selector).append("div")
+            .style("position", "relative")
+            .style("width", width + "px")
+            .style("height", 300 + "px");
+
         //tooltip
         const tool = d3
             //.select(selector)
@@ -48,9 +56,9 @@ function treemap() {
             .append("div")
             //.attr("class", "tooltip")
             .attr("class", "tooltip");
-            //.style("opacity", 0);
-            //.attr("style", "position: absolute; opacity: 0");
-            //.attr("style");
+        //.style("opacity", 0);
+        //.attr("style", "position: absolute; opacity: 0");
+        //.attr("style");
 
         // use this information to add rectangles:
         svg
@@ -71,11 +79,11 @@ function treemap() {
                 tool.style("left", d3.event.pageX + 10 + "px")
                 tool.style("top", d3.event.pageY - 20 + "px")
                 tool.style("opacity", 1);
-                tool.html(function() {
+                tool.html(function () {
                     return "<span>" + "Number of vendors: " + d.data.value + "</span>";
-                //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
-            })
-        }).on("mouseout", function (d) {
+                    //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
+                })
+            }).on("mouseout", function (d) {
                 tool
                     .transition()
                     .duration(0)
@@ -111,7 +119,7 @@ function treemap() {
             .append("text")
             .selectAll('tspan')
             .data(d => {
-                var t = "Business Type: " + d.data["Type of Business (Exhibitor/Vendor)"] + "," + "Product Type: "  + d.data["Product Category"];
+                var t = "Business Type: " + d.data["Type of Business (Exhibitor/Vendor)"] + "," + "Product Type: " + d.data["Product Category"];
                 return t.split(",") // split the text
                     .map(v => {
                         return {
@@ -139,9 +147,9 @@ function treemap() {
             //             y0: d.y0                         // keep y0 reference
             //         }
             //     });
-                
+
             // })
-            
+
             .enter()
             .append('tspan')
             .attr("x", (d) => d.x0 + 5)
@@ -158,7 +166,28 @@ function treemap() {
             //           null;
             // })
             .attr("font-size", "5px")
-            .attr("fill", "white");S
+            .attr("fill", "white"); 
+
+        // add legend http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
+        legend
+            .append('text')
+            .style("position", "absolute")
+            .style("text-anchor", "left")
+            .attr("class", "attribution")
+            .html("Type of Business")
+            .style("left", "5px")
+            .style("top", "34px");
+
+        for (i = 0; i < 3; i++) {
+            legend.append('div')
+                .attr("class", "legend")
+                .style("width", "350px")
+                .style("height", "15px")
+                .style("left", "5px")
+                .style("top", function (d) { return (55 + 18 * i) + "px" })
+                .text(function (d) { return legLabels[i] })
+                .style("background", function (d) { return legColors[i] })
+        };
 
         return chart;
     }
