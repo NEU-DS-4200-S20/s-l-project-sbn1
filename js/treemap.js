@@ -121,13 +121,44 @@ function treemap() {
                         }
                     });
             })
+
+            // .data(d => {
+            //     console.log(d.x0);
+            //     var t = d.children ? null :
+            //      (d.y0 < 10) ? null :
+            //       (d.x0 < 10) ? null :
+            //        (d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 4) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
+            //         (d.y0 < 25) ? null :
+            //          ((d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 2.5)) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
+            //           null;
+
+            //     t.map(v => {
+            //         return {
+            //             text: v,
+            //             x0: d.x0,                        // keep x0 reference
+            //             y0: d.y0                         // keep y0 reference
+            //         }
+            //     });
+                
+            // })
+            
             .enter()
             .append('tspan')
             .attr("x", (d) => d.x0 + 5)
             .attr("y", (d, i) => d.y0 + 15 + (i * 10))
             .text(function (d) { return d.text; })
-            .attr("font-size", "8px")
-            .attr("fill", "white");
+            // .text(function (d) {
+            //     console.log(d.x0);
+            //     return d.children ? null :
+            //      (d.y0 < 10) ? null :
+            //       (d.x0 < 10) ? null :
+            //        (d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 4) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
+            //         (d.y0 < 25) ? null :
+            //          ((d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 2.5)) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
+            //           null;
+            // })
+            .attr("font-size", "5px")
+            .attr("fill", "white");S
 
         return chart;
     }
