@@ -32,7 +32,21 @@
       let treemapData = treemap()
         .selectionDispatcher(d3.dispatch(dispatchString))
         ("#treemap", groupByBusiness);
+		
+		
+				
+/* 	 // When the table selection is updated via brushing, 
+    // tell the treemap to update it's selection (linking)
+	 tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
+      treemapData.updateSelection(selectedData);
     });
+
+    // When the treemap selection is updated via brushing, 
+    // tell the table to update it's selection (linking)
+    treemapData.selectionDispatcher().on(dispatchString, function(selectedData) {
+      tableData.updateSelection(selectedData);
+*/
+    }); 
   });
 
 })());

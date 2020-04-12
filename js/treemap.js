@@ -111,8 +111,8 @@ function treemap() {
             .append("text")
             .selectAll('tspan')
             .data(d => {
-                var t = d.data["Type of Business (Exhibitor/Vendor)"] + ", " + d.data["Product Category"];
-                return t.split(/(?=[A-Z][^A-Z])/g) // split the text
+                var t = "Business Type: " + d.data["Type of Business (Exhibitor/Vendor)"] + "," + "Product Type: "  + d.data["Product Category"];
+                return t.split(",") // split the text
                     .map(v => {
                         return {
                             text: v,
@@ -126,7 +126,7 @@ function treemap() {
             .attr("x", (d) => d.x0 + 5)
             .attr("y", (d, i) => d.y0 + 15 + (i * 10))
             .text(function (d) { return d.text; })
-            .attr("font-size", "3px")
+            .attr("font-size", "8px")
             .attr("fill", "white");
 
         return chart;
