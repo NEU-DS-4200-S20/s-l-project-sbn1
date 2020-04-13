@@ -45,14 +45,25 @@ table {
 	text-align: right;
 	margin: 40px auto;
 }
+
+.my-table tbody{
+	overflow: auto;
+	height: 500px;
+	display: block;
+}
+
+.my-table thead, tbody tr {
+	display:table;
+    width:100%;
+    table-layout:fixed;
+}
   
-th {
+.my-table thead {
 	  background-color: #66b447;
 	  color: white;
 }
   
-th, td {
-	/* vertical | horizontal */
+.my-table, tr td, th {
 	padding: 0 8px;
 	border: 1px solid black;
 }

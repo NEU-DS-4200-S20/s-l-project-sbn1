@@ -4,12 +4,12 @@ _.nest = require("underscore.nest");
 
 const fs = require('fs');
 
-let rawdata = fs.readFileSync('../data/bareJson.json');
+let rawdata = fs.readFileSync('../data/new_bare.json');
 let vendors = JSON.parse(rawdata);
 console.log(vendors);
 
 // run your nesting
-nestedVendors = _.nest.nest(vendors, ["Type of Business (Exhibitor/Vendor)", "Product Category"]);
+nestedVendors = _.nest.nest(vendors, ["Business Type", "Product Category"]);
 console.log("nestedVendors:")
 console.log(nestedVendors)
 

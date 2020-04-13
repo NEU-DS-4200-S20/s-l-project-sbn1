@@ -119,7 +119,7 @@ function treemap() {
             .append("text")
             .selectAll('tspan')
             .data(d => {
-                var t = "Business Type: " + d.data["Type of Business (Exhibitor/Vendor)"] + "," + "Product Type: " + d.data["Product Category"];
+                var t = "Business Type: " + d.data["Business Type"] + "," + "Product Type: " + d.data["Product Category"];
                 return t.split(",") // split the text
                     .map(v => {
                         return {

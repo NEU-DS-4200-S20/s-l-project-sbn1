@@ -1,0 +1,274 @@
+[
+  {
+    "0": 1,
+    "Business Type": "Non-Massachusetts Specialty Crop Farm",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "<1",
+    "value": 1
+  },
+  {
+    "0": 2,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Plants",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "3 to 5",
+    "value": 1
+  },
+  {
+    "0": 3,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 4,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "3 to 5",
+    "value": 1
+  },
+  {
+    "0": 5,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "1 to 3",
+    "value": 1
+  },
+  {
+    "0": 6,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 7,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Other",
+    "Max Volume Available (Pallets)": "1 to 3",
+    "value": 1
+  },
+  {
+    "0": 8,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "> 20",
+    "value": 1
+  },
+  {
+    "0": 9,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "3 to 5",
+    "value": 1
+  },
+  {
+    "0": 10,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 11,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Other",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 12,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "GAP Certification",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 13,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "1 to 3",
+    "value": 1
+  },
+  {
+    "0": 14,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "3 to 5",
+    "value": 1
+  },
+  {
+    "0": 15,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Other",
+    "Max Volume Available (Pallets)": "> 20",
+    "value": 1
+  },
+  {
+    "0": 16,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "3 to 5",
+    "value": 1
+  },
+  {
+    "0": 17,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "GAP Certification",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 18,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 19,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 20,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Focus on heirloom varieties or heritage breeds",
+    "Max Volume Available (Pallets)": "10 to 20",
+    "value": 1
+  },
+  {
+    "0": 21,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Plants",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "< 1",
+    "value": 1
+  },
+  {
+    "0": 22,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "> 20",
+    "value": 1
+  },
+  {
+    "0": 23,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "> 20",
+    "value": 1
+  },
+  {
+    "0": 24,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce and Value-Added Products",
+    "Special Production Practices": "Other",
+    "Max Volume Available (Pallets)": "1 to 3",
+    "value": 1
+  },
+  {
+    "0": 25,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Multiple Special Practices",
+    "Max Volume Available (Pallets)": "10 to 20",
+    "value": 1
+  },
+  {
+    "0": 26,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "1 to 3",
+    "value": 1
+  },
+  {
+    "0": 27,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Plants",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "1 to 3",
+    "value": 1
+  },
+  {
+    "0": 28,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 29,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "< 1",
+    "value": 1
+  },
+  {
+    "0": 30,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Other",
+    "Max Volume Available (Pallets)": "> 20",
+    "value": 1
+  },
+  {
+    "0": 31,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "N/A",
+    "Max Volume Available (Pallets)": "< 1",
+    "value": 1
+  },
+  {
+    "0": 32,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Other",
+    "Special Production Practices": "Other",
+    "Max Volume Available (Pallets)": "N/A",
+    "value": 1
+  },
+  {
+    "0": 33,
+    "Business Type": "Specialty Crop Value-Added Producer (50% or more specialty crop)",
+    "Product Category": "Value-Added Products",
+    "Special Production Practices": "Focus on heirloom varieties or heritage breeds",
+    "Max Volume Available (Pallets)": "< 1",
+    "value": 1
+  },
+  {
+    "0": 34,
+    "Business Type": "Massachusetts Specialty Crop Farm",
+    "Product Category": "Produce",
+    "Special Production Practices": "Organic Certification",
+    "Max Volume Available (Pallets)": "3 to 5",
+    "value": 1
+  }
+]
