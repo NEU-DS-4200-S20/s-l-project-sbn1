@@ -10,6 +10,7 @@ function table() {
     // Create the chart by adding an svg to the div with the id 
     // specified by the selector using the given data
     function chart(selector, data) {
+        console.log(data);
         let table = d3.select(selector)
             .append("table")
             .classed("my-table", true);
@@ -44,7 +45,8 @@ function table() {
             .selectAll("tr")
             .data(data)
             .enter()
-            .append("tr");
+            .append("tr")
+            .attr("id", function (d) { return "id" + d["0"];});
 
         var cells = rows
             .selectAll('td')

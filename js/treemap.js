@@ -17,7 +17,7 @@ function treemap() {
         selectableElements = d3.select(null),
         dispatcher;
 
-    function chart(selector, data) {
+    function chart(selector, data, tableData) {
         let svg = d3.select(selector)
             .append("svg")
             .attr("preserveAspectRatio", "xMidYMid meet")
@@ -83,6 +83,10 @@ function treemap() {
                     return "<span>" + "Number of vendors: " + d.data.value + "</span>";
                     //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
                 })
+
+            })
+            .on("click", function (d) {
+                selection(d);
             }).on("mouseout", function (d) {
                 tool
                     .transition()
@@ -130,41 +134,13 @@ function treemap() {
                     });
             })
 
-            // .data(d => {
-            //     console.log(d.x0);
-            //     var t = d.children ? null :
-            //      (d.y0 < 10) ? null :
-            //       (d.x0 < 10) ? null :
-            //        (d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 4) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
-            //         (d.y0 < 25) ? null :
-            //          ((d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 2.5)) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
-            //           null;
 
-            //     t.map(v => {
-            //         return {
-            //             text: v,
-            //             x0: d.x0,                        // keep x0 reference
-            //             y0: d.y0                         // keep y0 reference
-            //         }
-            //     });
-
-            // })
 
             .enter()
             .append('tspan')
             .attr("x", (d) => d.x0 + 5)
             .attr("y", (d, i) => d.y0 + 15 + (i * 10))
             .text(function (d) { return d.text; })
-            // .text(function (d) {
-            //     console.log(d.x0);
-            //     return d.children ? null :
-            //      (d.y0 < 10) ? null :
-            //       (d.x0 < 10) ? null :
-            //        (d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 4) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
-            //         (d.y0 < 25) ? null :
-            //          ((d.data["Type of Business (Exhibitor/Vendor)"]).length < (d.x0 / 2.5)) ? d.data["Type of Business (Exhibitor/Vendor)"] + ", " + "Product Type: "  + d.data["Product Category"]:
-            //           null;
-            // })
             .attr("font-size", "5px")
             .attr("fill", "white"); 
 
@@ -190,6 +166,16 @@ function treemap() {
                 .style("background", function (d) { return legColors[i] })
         };
 
+        function selection(treemap_selected) {   
+            tableData.filter(d => {
+                if (!(d["Business Type"] == treemap_selected["data"]["Business Type"] 
+                && d["Product Category"] == treemap_selected["data"]["Product Category"])) {
+                    d3.select("table").select("#id" + d["0"]).style("display", "none");
+                }
+            });
+
+        }
+
         return chart;
     }
 
@@ -199,6 +185,7 @@ function treemap() {
         dispatcher = k;
         return chart;
     };
+
 
     return chart;
 }

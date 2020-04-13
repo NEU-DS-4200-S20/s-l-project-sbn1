@@ -21,7 +21,7 @@
       let tableData = table()
         .selectionDispatcher(d3.dispatch(dispatchString))
         ("#table", data);
-
+      tableData = data;
 
       // var groupByBusiness = _.nest(data, ["Type of Business (Exhibitor/Vendor)"]);
       //   console.log(JSON.stringify(groupByBusiness));
@@ -31,7 +31,7 @@
       // a div id selector to put our treemap in; and the data to use.
       let treemapData = treemap()
         .selectionDispatcher(d3.dispatch(dispatchString))
-        ("#treemap", groupByBusiness);
+        ("#treemap", groupByBusiness, data);
 		
 		
 				
