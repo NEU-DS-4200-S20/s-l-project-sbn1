@@ -47,7 +47,7 @@ function treemap() {
         var legend = d3.select(selector).append("div")
             .style("position", "relative")
             .style("width", width + "px")
-            .style("height", 300 + "px");
+            .style("height", 200 + "px");
 
         //tooltip
         const tool = d3
@@ -169,22 +169,23 @@ function treemap() {
             .attr("fill", "white"); 
 
         // add legend http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
-        legend
-            .append('text')
-            .style("position", "absolute")
-            .style("text-anchor", "left")
-            .attr("class", "attribution")
-            .html("Type of Business")
+
+        legend.append('div')
+            .attr("class", "legend")
+            .style("width", "350px")
+            .style("height", "15px")
             .style("left", "5px")
-            .style("top", "34px");
+            .style("top", "0px")
+            .text("Type of Business (Exhibitor/Vendor):" )
+            .style("background", "white")
 
         for (i = 0; i < 3; i++) {
             legend.append('div')
                 .attr("class", "legend")
                 .style("width", "350px")
                 .style("height", "15px")
-                .style("left", "5px")
-                .style("top", function (d) { return (55 + 18 * i) + "px" })
+                .style("left", "40px")
+                .style("top", function (d) { return (55 + 18*i) + "px" })
                 .text(function (d) { return legLabels[i] })
                 .style("background", function (d) { return legColors[i] })
         };
