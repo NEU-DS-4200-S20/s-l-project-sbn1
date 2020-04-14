@@ -167,14 +167,47 @@ function treemap() {
                 .style("background", function (d) { return legColors[i] })
         };
 
-        function selection(treemap_selected) {   
-            tableData.filter(d => {
-                if (!(d["Business Type"] == treemap_selected["data"]["Business Type"] 
-                && d["Product Category"] == treemap_selected["data"]["Product Category"])) {
-                    d3.select("table").select("#id" + d["0"]).style("display", "none");
+        var currentlySelected = [];
+        function selection(treemap_selected) {  
+            if (currentlySelected.includes(treemap_selected)) {
+                if (currentlySelected.length > 1) {
+                    tableData.filter(d => {
+                        if (d["Business Type"] == treemap_selected["data"]["Business Type"] 
+                        && d["Product Category"] == treemap_selected["data"]["Product Category"]) {
+                            d3.select("table").select("#id" + d["0"]).style("display", "none");
+                        }
+                    });
+                    
+                    currentlySelected = currentlySelected.filter(function(value, index, arr){
+                         return value != treemap_selected;});
                 }
-            });
 
+                else {
+                    d3.select("table").selectAll("tr").style("display", null);
+                    currentlySelected = [];
+                }
+                
+            }
+            else {
+                currentlySelected.push(treemap_selected);
+                if (currentlySelected.length > 1) {
+                    tableData.filter(d => {
+                        if (d["Business Type"] == treemap_selected["data"]["Business Type"] 
+                        && d["Product Category"] == treemap_selected["data"]["Product Category"]) {
+                            d3.select("table").select("#id" + d["0"]).style("display", null);
+                        }
+                    });
+                }
+    
+                else {
+                    tableData.filter(d => {
+                        if (!(d["Business Type"] == treemap_selected["data"]["Business Type"] 
+                        && d["Product Category"] == treemap_selected["data"]["Product Category"])) {
+                            d3.select("table").select("#id" + d["0"]).style("display", "none");
+                        }
+                    });
+                }
+            }
         }
 
         return chart;
