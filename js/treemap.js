@@ -75,9 +75,9 @@ function treemap() {
                 tool.style("top", d3.event.pageY - 20 + "px")
                 tool.style("opacity", 1);
                 tool.html(function () {
-                    return "<span>" + "Number of vendors: " + d.data.value + "</span>";
-                    //d.children ? null : d.name + "<br>" + ' $ ' + formatMoney(Math.round(d.size * 1000)) + ' ' + roundToTwo((d.value / 16147370.2) * 100) + '%');
-                })
+                    return "<span>"  + "<b>Business Type: </b>" + "<br>" + d.data["Business Type"] + "<br>" + "<b>Product Type: </b>" + "<br>" + d.data["Product Category"] + "<br>" + "<b>Number of vendors: </b>" + "<br>" + d.data.value + "</span>";
+                    })
+
 
             })
             .on("click", function (d) {
@@ -118,8 +118,8 @@ function treemap() {
             .append("text")
             .selectAll('tspan')
             .data(d => {
-                var t = "Business Type: " + d.data["Business Type"] + "," + "Product Type: " + d.data["Product Category"];
-                return t.split(",") // split the text
+                var t = d.data["Product Category"];
+                return t.split(" ") // split the text
                     .map(v => {
                         return {
                             text: v,
@@ -136,7 +136,7 @@ function treemap() {
             .attr("x", (d) => d.x0 + 5)
             .attr("y", (d, i) => d.y0 + 15 + (i * 10))
             .text(function (d) { return d.text; })
-            .attr("font-size", "5px")
+            .attr("font-size", "10px")
             .attr("fill", "white"); 
 
         // add legend http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
@@ -149,23 +149,21 @@ function treemap() {
         
         legend.append('div')
             .attr("class", "title")
-            .style("width", "320px")
-            .style("height", "15px")
-            .style("left", "5px")
-            .style("top", "0px")
-            .text("Type of Business (Exhibitor/Vendor):" )
-            .style("background", "white")
+            .style("width", "240px")
+            .style("height", "22px")
+            .text("Type of Business (Exhibitor/Vendor) Legend:" )
+            .style("background", "black")
 
         for (i = 0; i < 3; i++) {
             legend.append('div')
                 .attr("class", "category")
-                .style("width", "320px")
-                .style("height", "15px")
-                .style("left", "40px")
+                .style("width", "400px")
+                .style("height", "22px")
                 .style("top", function (d) { return (55 + 18*i) + "px" })
                 .text(function (d) { return legLabels[i] })
                 .style("background", function (d) { return legColors[i] })
         };
+
 
         var currentlySelected = [];
         function selection(treemap_selected) {  

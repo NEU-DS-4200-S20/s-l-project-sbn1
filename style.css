@@ -22,11 +22,13 @@ h1, h2, h3 {
 }
 .treemap-holder {
 	display: flex;
+	height: 600px;
 }
 
 .legend-holder {
-	font-size: 10px;
+	font-size: 12px;
 	flex: 0 0 40%;
+	color: white;
 }
 
 .svg-content {
@@ -52,7 +54,7 @@ h1, h2, h3 {
 
 
 table {
-	font-size: 8px;
+	font-size: 12px;
 	border-collapse: separate;
 	/* vertical | horizontal */
 	border-spacing: 0 0;
