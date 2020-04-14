@@ -61,11 +61,11 @@ function treemap() {
             .data(root.leaves())
             .enter()
             .append("rect")
+            .attr("id", function (d) { return "id" + d.data["0"];})
             .attr('x', function (d) { return d.x0; })
             .attr('y', function (d) { return d.y0; })
             .attr('width', function (d) { return d.x1 - d.x0; })
             .attr('height', function (d) { return d.y1 - d.y0; })
-            .style("stroke", "black", "10px") // now there's no border???
             .style("fill", (d) => color(d.parent.parent.data.name))
 
 
@@ -170,6 +170,7 @@ function treemap() {
         var currentlySelected = [];
         function selection(treemap_selected) {  
             if (currentlySelected.includes(treemap_selected)) {
+                d3.select(selector).select("#id" + treemap_selected.data["0"]).style("opacity", null);
                 if (currentlySelected.length > 1) {
                     tableData.filter(d => {
                         if (d["Business Type"] == treemap_selected["data"]["Business Type"] 
@@ -190,6 +191,8 @@ function treemap() {
             }
             else {
                 currentlySelected.push(treemap_selected);
+                d3.select(selector).select("#id" + treemap_selected.data["0"]).style("opacity", ".5");
+
                 if (currentlySelected.length > 1) {
                     tableData.filter(d => {
                         if (d["Business Type"] == treemap_selected["data"]["Business Type"] 
