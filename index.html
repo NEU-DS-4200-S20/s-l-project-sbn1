@@ -85,16 +85,14 @@
     <h1>Visualization explanation</h1>
     
       <p>Our visualization aims to display trade show vendor attendees in a heirarchical format. 
-      For Sprint 1, we have a static version of our table (which shows all relevant vendor details) and a singluar implementation 
+      For Sprint 2, we have a scrollable version of our table (which shows all relevant vendor details) and a singluar implementation 
       of the treemap (which groups and orders vendors by certain categories). Vendors listed in the table are represented in the grouped
       treemap cells; the area of each cell depicts how many vendors fall into a specificed category. This information is currently grouped 
-      by "Type of Business" followed by "Product Category." For interactivity, hovering over a treemap cell displays the total number
-      of vendors on the bottom left corner of the treemap.</p>
+      by "Business Type" followed by "Product Category." For interactivity, hovering over a treemap cell displays the total number
+      of vendors on a tooltip. We also have some linking; when you click on a box in the treemap, the table will be filtered so that only 
+      the corresponding rows show.</p>
 
-    <p>For our final visualization, we aim to add more interactivity and linked views. The user could specify the number of nested
-      subdivisions for the treemap (e.g., group vendors by Type of Business -> Product Category -> Max Volume). Mouseover events would be used
-      to show total vendor counts and other information. Ultimately, the table and treemap views will be linked so that hovering/selecting a vendor
-      in the table will highlight the appropriate treemap cell and vice versa.</p>
+      <p>For friday we will be adding the demo video, along with screenshots of the final visualization.</p>
 
     <h1>Data Analysis</h1>
     <p>There were three separate datasets provided to us from SBN. One CSV contained information about the buyers. 
@@ -144,36 +142,72 @@
       ability, and presenting this in our visualization.</p>
     <h1>Design Process</h1>
     
-      <p>Our design process was split into these major iterations - a tableau Exploration, hand drawn sketches of  
-      our visualization, and a digitally sketched visualization with a lot of detail, usability testing and 
-      editing our visualization, and then the final visualization.</p>
+      <p>Our design process was split into these major iterations - a tableau Exploration, hand drawn sketches of  
+        our visualization, and a digitally sketched visualization with a lot of detail, usability testing 
+        and editing our visualization, and then the final visualization. </p>
 
-    <p>Before we were fully accustomed to our data and the project, we were tasked with combing through our data 
-      in Tableau to gain a further understanding of our data. Here we created several types of visualizations to 
-      try to fulfill the tasks we created in our task analysis section. We mostly created simple visualizations such 
-      as bar charts which plotted businesses to the amount of food they can provide, or a table showing business types 
-      (such as non-profit, retail grocer, wholesale grocer, etc.).</p>
+    <p>Before we were fully accustomed to our data and the project, we were tasked with combing through 
+      our data in Tableau to gain a further understanding of our data. Here we created several types of 
+      visualizations to try to fulfill the tasks we created in our task analysis section. We mostly 
+      created simple visualizations such as bar charts which plotted businesses to the amount of food 
+      they can provide, or a table showing business types.</p>
   
-    <p>The second iteration of sketches were hand drawn. During this iteration, more of an emphasis was placed on creating a 
-      visualization with proper design choices that we learned in class.</p>
+    <p>The second iteration of sketches were hand drawn. During this iteration, more of an emphasis 
+      was placed on creating a visualization with proper design choices that we learned in class.</p>
 
     <p><img src="images/design_process/sketch.PNG" width="600"></p>
     <p><b>Figure 1.</b> Hand drawn sketch of visualization.</p>
 
-    <p>The third iteration of our visualization was a digitally sketched version using a combination of figma, tableau, and excel 
-    with a detailed explanation of how we expect our visualization to work. During this section, we created the specific filters 
-    (such as food category, farm category, pallet capacity, etc.) that our visualization would have as well as how brushing and 
-    linking would change the view of our visualization step-by-step.</p>
+    <p>The third iteration of our visualization was a digitally sketched version using a combination 
+      of figma, tableau, and excel with a detailed explanation of how we expect our visualization to 
+      work. During this section, we created the specific filters (such as food category, farm category, 
+      pallet capacity, etc.) that our visualization would have as well as how brushing and linking would 
+      change the view of our visualization step-by-step. To see more specifications, look at figure 2 
+      in the visualization section.</p>
 
     <p><img src="images/design_process/final.PNG" width="600"></p>
     <p><b>Figure 2.</b> Digitally-created final design sketch.</p>
 
+    <p>Our fourth and fifth versions of our visualizations were created by coding it through Javascript.
+       For the most part, we were able to bring to life our sketches in part 3, but we had some 
+       difficulty implementing interactive and brushing and linking. After the fourth version, we 
+       conducted a usability test in class, and realized that our visualization was neither as clear 
+       nor as easy to use as we anticipated. Several key takeaways we took away was that we needed to 
+       make it easier for people unfamiliar with the data understand the data better (we did this by 
+       creating understandable category names, changing text in our data to be more concise, and getting
+        rid of unimportant data), we needed to make the visualization look better (we eventually made 
+        the treemap and corresponding table smaller so that it was easier on the eye), and we needed to 
+        improve our brushing and linking (we did this by having a tooltip that that hovers over the tree 
+        map, and adding additional linking to our treemap and table). Our fifth version (Sprint 2) is where we 
+        made these changes.</p>
+
     <h1>Conclusion</h1>
 
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
+    <p>Overall, our group did the best we could considering the constraints we had - learning a new 
+      programming language, figuring out how to handle working remotely - and I believe we did well! 
+      The biggest takeaway from this project was that we learned the whole design thinking for how to 
+      create a useful visualization. We went through the process of interviewing a partner, understanding 
+      the problem at hand, brainstorming how to solve the problem, receiving a dataset, exploring a 
+      dataset, creating several mock sketches and then creating an even more detailed sketch, completing 
+      several digitally coded versions as well going through usability test, and then eventually 
+      presenting our project to our instructors and partners. The coding portion really only lasted about 
+      two weeks, but the rest of the project lasted months - this showed us the value of thorough 
+      planning and interacting with a client. </p>
     
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
+    <p>Some things our group wished we would have done was have more interaction with the group we are 
+      creating the visualization for, specifically the Sustainable Business Network (SBN). While we 
+      understand there were constraints, as SBN had many groups and would be unable to meet with so 
+      many students, we also felt disconnected from the organization, as we only met our partners in 
+      person once for an interview. One other thing we also wish was that we had more usability testing 
+      sessions. We received a lot of insight from the usability testing session that made our visualization 
+      significantly better, and we would have loved to done more testing for the several iterations of our 
+      visualization. A future goal of the project would be implementing the user chosen treemap where 
+      they get to decide the hierarchy as we originally planned.</p>
 
+    <p>We really enjoyed this project, and we are confident the skills learned from this project will 
+      translate to the future! We had a blast working with our group mates, working with our partners, 
+      and communicating with the teaching staff, and we look forward to applying our newfound knowledge 
+      of data visualization in the future!</p>
     
     <h1>Acknowledgments</h1>
 

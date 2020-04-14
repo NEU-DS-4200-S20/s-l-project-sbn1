@@ -44,11 +44,6 @@ function treemap() {
         var legColors = ["#66b447", "#9f2b68", "#f2b400"],
             legLabels = ["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"];
 
-        var legend = d3.select(selector).append("div")
-            .style("position", "relative")
-            .style("width", width + "px")
-            .style("height", 200 + "px");
-
         //tooltip
         const tool = d3
             //.select(selector)
@@ -146,9 +141,15 @@ function treemap() {
 
         // add legend http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
 
+        var legend = d3.select(selector).append("div").classed("legend-holder", true)
+        .style("position", "relative")
+        .style("width", 350 + "px")
+        .style("height", 60 + "px");
+
+        
         legend.append('div')
-            .attr("class", "legend")
-            .style("width", "350px")
+            .attr("class", "title")
+            .style("width", "320px")
             .style("height", "15px")
             .style("left", "5px")
             .style("top", "0px")
@@ -157,8 +158,8 @@ function treemap() {
 
         for (i = 0; i < 3; i++) {
             legend.append('div')
-                .attr("class", "legend")
-                .style("width", "350px")
+                .attr("class", "category")
+                .style("width", "320px")
                 .style("height", "15px")
                 .style("left", "40px")
                 .style("top", function (d) { return (55 + 18*i) + "px" })
