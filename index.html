@@ -86,15 +86,19 @@
 
     <h1>Visualization explanation</h1>
     
-      <p>Our visualization aims to display trade show vendor attendees in a heirarchical format. 
-      For Sprint 2, we have a scrollable version of our table (which shows all relevant vendor details) and a singluar implementation 
+    <p>Our visualization aims to display trade show vendor attendees in a heirarchical format. 
+      We have a scrollable table (which shows all relevant vendor details) and a singluar implementation 
       of the treemap (which groups and orders vendors by certain categories). Vendors listed in the table are represented in the grouped
       treemap cells; the area of each cell depicts how many vendors fall into a specificed category. This information is currently grouped 
-      by "Business Type" followed by "Product Category." For interactivity, hovering over a treemap cell displays the total number
-      of vendors on a tooltip. We also have some linking; when you click on a box in the treemap, the table will be filtered so that only 
-      the corresponding rows show.</p>
+      by "Type of Business" followed by "Product Category." A legend depicts which colors correspond to each business type; these colors
+      were chosen to go along with food/crop colors that are commonly associated with fresh crops and farmers markets.</p>
 
-      <p>For friday we will be adding the demo video, along with screenshots of the final visualization.</p>
+      <p>For details on demand, hovering over a treemap cell displays all information for that cell within a tooltip: business type, 
+      product type, and total number of vendors. This prevents the treemap cells from showing too much text at once if it is not desired.
+      The treemap and table are also interactive and linked to one another. Clicking on treemap cells filters the table so that only the 
+      vendors that fall within that category are shown. Clicking additional cells adds them to the filter, and clicking on already-selected
+      cells removes them from the filter.</p>
+
 
     <h1>Data Analysis</h1>
     <p>There were three separate datasets provided to us from SBN. One CSV contained information about the buyers. 
@@ -220,6 +224,8 @@
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
       <li><a href="http://github.com/iros/underscore.nest/">Underscore.Nest</a> by Irene Ros.</li>
       <li><a href="https://underscorejs.org">Underscore.js Javascript Library</a> by Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors.</li>
+      <li><a href="http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929">Treemap with Tooltip</a> by Nathan Dobie.</li>
+      <li><a href="https://www.d3-graph-gallery.com/graph/treemap_json.html">Treemap from Json format in d3.js</a> by Yan Holtz.</li>
     </ul>
     
   </div>
