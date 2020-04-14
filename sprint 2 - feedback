@@ -1,0 +1,9 @@
+8.5/10 
+-1.5  
+a) Please fix the legend. There is overlapping text and is easy to miss in the beginning. 
+The intearction is well implemented, however, I think having a small note before the visualization about 
+how it works will be helpful for most users. 
+b) The interaction is not smooth. Clicking on the visualization is a little bit confusing. 
+For instance, clicking on the text produce in the orange box does not do anything, i have to click outside it. 
+Would be great to look into it (or potentially have a hand icon, but you can ignore this if it is difficult to implement).
+c) Think about what column 0 in the table means? 
