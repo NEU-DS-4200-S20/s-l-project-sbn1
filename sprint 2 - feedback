@@ -7,3 +7,7 @@ b) The interaction is not smooth. Clicking on the visualization is a little bit 
 For instance, clicking on the text produce in the orange box does not do anything, i have to click outside it. 
 Would be great to look into it (or potentially have a hand icon, but you can ignore this if it is difficult to implement).
 c) Think about what column 0 in the table means? 
+
+Update: 10/10
+We actually decided not to penalize people for these issues for sprint 2. 
+Please account for these comments for the final deliverable. We will be checking if these are accounted for at that time.
