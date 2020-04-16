@@ -215,12 +215,17 @@
     <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
     
     <ul>
-      <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
       <li><a href="http://github.com/iros/underscore.nest/">Underscore.Nest</a> by Irene Ros.</li>
       <li><a href="https://underscorejs.org">Underscore.js Javascript Library</a> by Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors.</li>
       <li><a href="http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929">Treemap with Tooltip</a> by Nathan Dobie.</li>
       <li><a href="https://www.d3-graph-gallery.com/graph/treemap_json.html">Treemap from Json format in d3.js</a> by Yan Holtz.</li>
+      <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock. In particular:
+        <ul>
+          <li><a href="https://github.com/d3/d3-dispatch">d3-dispatch</a>, which lets you register named callbacks and
+            call them with arguments. We use it for linking.</li>
+        </ul>
+      </li>
     </ul>
     
   </div>
@@ -229,7 +234,6 @@
 
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="lib/require.js"></script>
-
   <script src="js/table.js"></script>  
   <script src="js/treemap.js"></script>
   <script src="js/visualization.js"></script>

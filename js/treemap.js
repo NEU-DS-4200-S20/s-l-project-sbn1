@@ -1,10 +1,11 @@
 // initialize treemap
+// Initialize a line chart. Modeled after Mike Bostock's
+// Reusable Chart framework https://bost.ocks.org/mike/chart/
 function treemap() {
 
-    // ATTEMPT 1: appending to vis-holder svg 
-    // CODE FROM: https://www.d3-graph-gallery.com/graph/treemap_json.html
-
     // set the dimensions and margins of the graph
+    // Based on Mike Bostock's margin convention
+    // https://bl.ocks.org/mbostock/3019563
     let margin = {
         top: 10,
         right: 10,
@@ -36,7 +37,7 @@ function treemap() {
             .padding(1)
             (root);
 
-        // color!
+        // color scheme for business type
         var color = d3.scaleOrdinal()
             .domain(["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"])
             .range(["#66b447", "#9f2b68", "#f2b400"]);
@@ -44,16 +45,11 @@ function treemap() {
         var legColors = ["#66b447", "#9f2b68", "#f2b400"],
             legLabels = ["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"];
 
-        //tooltip
+        // tooltip
         const tool = d3
-            //.select(selector)
             .select("body")
             .append("div")
-            //.attr("class", "tooltip")
             .attr("class", "tooltip");
-        //.style("opacity", 0);
-        //.attr("style", "position: absolute; opacity: 0");
-        //.attr("style");
 
         // use this information to add rectangles:
         svg
