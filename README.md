@@ -1,6 +1,6 @@
 # Project Team SBN1: Sustainable Business Network, DS 4200 S20
 
-This project was made by Anika Rabenhorst, Samantha Roman</strong>, Gisselle Rodriguez Benitez, and Suraj Korumilli as a Service-Learning project for Northeastern University's DS4200: Information Presentation and Visualization class (https://canvas.instructure.com/courses/1781714). 
+This project was made by Anika Rabenhorst, Samantha Roman, Gisselle Rodriguez Benitez, and Suraj Korumilli as a Service-Learning project for Sustainable Business Network of Massachusetts. Knowledge of d3 and data visualization comes from Northeastern University's DS4200: Information Presentation and Visualization class (https://canvas.instructure.com/courses/1781714). 
 
 ## The GitHub Pages Website
 
