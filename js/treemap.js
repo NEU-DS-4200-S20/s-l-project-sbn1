@@ -56,7 +56,7 @@ function treemap() {
             .data(root.leaves())
             .enter()
             .append("rect")
-            .attr("id", function (d) { return "id" + d.data["0"];})
+            .attr("id", function (d) { return "id" + d.data["Vendor Name"];})
             .attr('x', function (d) { return d.x0; })
             .attr('y', function (d) { return d.y0; })
             .attr('width', function (d) { return d.x1 - d.x0; })
@@ -85,6 +85,7 @@ function treemap() {
             .data(root.leaves())
             .enter()
             .append("text")
+            // apply same tooltip and click selection to text labels
             .on("mousemove", function (d) {
                 tool.style("left", d3.event.pageX + 10 + "px")
                 tool.style("top", d3.event.pageY - 20 + "px")
@@ -118,9 +119,7 @@ function treemap() {
             .attr("y", (d, i) => d.y0 + 15 + (i * 10))
             .text(function (d) { return d.text; })
             .attr("font-size", "10px")
-            .attr("fill", "white")
-            // apply same tooltip to text labels
-            ; 
+            .attr("fill", "white"); 
 
         // add legend http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
         var legend = d3.select(selector).append("div").classed("legend-holder", true)
@@ -148,12 +147,12 @@ function treemap() {
         var currentlySelected = [];
         function selection(treemap_selected) {  
             if (currentlySelected.includes(treemap_selected)) {
-                d3.select(selector).select("#id" + treemap_selected.data["0"]).style("opacity", null);
+                d3.select(selector).select("#id" + treemap_selected.data["Vendor Name"]).style("opacity", null);
                 if (currentlySelected.length > 1) {
                     tableData.filter(d => {
                         if (d["Business Type"] == treemap_selected["data"]["Business Type"] 
                         && d["Product Category"] == treemap_selected["data"]["Product Category"]) {
-                            d3.select("table").select("#id" + d["0"]).style("display", "none");
+                            d3.select("table").select("#id" + d["Vendor Name"]).style("display", "none");
                         }
                     });
                     
@@ -169,13 +168,13 @@ function treemap() {
             }
             else {
                 currentlySelected.push(treemap_selected);
-                d3.select(selector).select("#id" + treemap_selected.data["0"]).style("opacity", ".5");
+                d3.select(selector).select("#id" + treemap_selected.data["Vendor Name"]).style("opacity", ".5");
 
                 if (currentlySelected.length > 1) {
                     tableData.filter(d => {
                         if (d["Business Type"] == treemap_selected["data"]["Business Type"] 
                         && d["Product Category"] == treemap_selected["data"]["Product Category"]) {
-                            d3.select("table").select("#id" + d["0"]).style("display", null);
+                            d3.select("table").select("#id" + d["Vendor Name"]).style("display", null);
                         }
                     });
                 }
@@ -184,7 +183,7 @@ function treemap() {
                     tableData.filter(d => {
                         if (!(d["Business Type"] == treemap_selected["data"]["Business Type"] 
                         && d["Product Category"] == treemap_selected["data"]["Product Category"])) {
-                            d3.select("table").select("#id" + d["0"]).style("display", "none");
+                            d3.select("table").select("#id" + d["Vendor Name"]).style("display", "none");
                         }
                     });
                 }

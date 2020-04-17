@@ -1,24 +1,24 @@
 {"children":
     [{"name":"Non-Massachusetts Specialty Crop Farm","children":
         [{"name":"Value-Added Products","children":
-            [{"0":1,"Business Type":"Non-Massachusetts Specialty Crop Farm","Product Category":"Value-Added Products","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"Less than a pallet","value":1}],"index":0}],"index":0},
+            [{"Vendor Name":1,"Business Type":"Non-Massachusetts Specialty Crop Farm","Product Category":"Value-Added Products","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"Less than a pallet","value":1}],"index":0}],"index":0},
     {"name":"Specialty Crop Value-Added Producer (50% or more specialty crop)",
         "children":[{"name":"Plants","children":
-            [{"0":2,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Plants","Special Production Practices":"Not Applicable","Max Volume Available (Pallets)":"1-3 pallets","value":1}],"index":0},
+            [{"Vendor Name":2,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Plants","Special Production Practices":"Not Applicable","Max Volume Available (Pallets)":"1-3 pallets","value":1}],"index":0},
         {"name":"Produce and Value-Added Products","children":
-            [{"0":4,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Produce and Value-Added Products","Special Production Practices":"Organic Certification","Max Volume Available (Pallets)":"3-5 pallets","value":1}],"index":1},
+            [{"Vendor Name":4,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Produce and Value-Added Products","Special Production Practices":"Organic Certification","Max Volume Available (Pallets)":"3-5 pallets","value":1}],"index":1},
         {"name":"Value-Added Products","children":
-            [{"0":7,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Value-Added Products","Special Production Practices":"Other","Max Volume Available (Pallets)":"1-3 pallets","value":7}],"index":2},
+            [{"Vendor Name":7,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Value-Added Products","Special Production Practices":"Other","Max Volume Available (Pallets)":"1-3 pallets","value":7}],"index":2},
         {"name":"Other","children":
-            [{"0":11,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Other","Special Production Practices":"Not Applicable","Max Volume Available (Pallets)":"Not Applicable","value":1}],"index":3}],"index":1},
+            [{"Vendor Name":11,"Business Type":"Specialty Crop Value-Added Producer (50% or more specialty crop)","Product Category":"Other","Special Production Practices":"Not Applicable","Max Volume Available (Pallets)":"Not Applicable","value":1}],"index":3}],"index":1},
     {"name":"Massachusetts Specialty Crop Farm","children":
         [{"name":"Produce","children":
-            [{"0":3,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Produce","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"Not Applicable","value":12}],"index":0},
+            [{"Vendor Name":3,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Produce","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"Not Applicable","value":12}],"index":0},
         {"name":"Produce and Value-Added Products","children":
-            [{"0":5,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Produce and Value-Added Products","Special Production Practices":"Not Applicable","Max Volume Available (Pallets)":"1-3 pallets","value":3}],"index":1},
+            [{"Vendor Name":5,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Produce and Value-Added Products","Special Production Practices":"Not Applicable","Max Volume Available (Pallets)":"1-3 pallets","value":3}],"index":1},
         {"name":"Other","children":
-            [{"0":6,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Other","Special Production Practices":"Organic Certification","Max Volume Available (Pallets)":"Not Applicable","value":5}],"index":2},
+            [{"Vendor Name":6,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Other","Special Production Practices":"Organic Certification","Max Volume Available (Pallets)":"Not Applicable","value":5}],"index":2},
         {"name":"Plants","children":
-            [{"0":21,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Plants","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"Less than a pallet","value":2}],"index":3},
+            [{"Vendor Name":21,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Plants","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"Less than a pallet","value":2}],"index":3},
         {"name":"Value-Added Products","children":
-            [{"0":25,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Value-Added Products","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"10-20 pallets","value":1}],"index":4}],"index":2}]}
+            [{"Vendor Name":25,"Business Type":"Massachusetts Specialty Crop Farm","Product Category":"Value-Added Products","Special Production Practices":"Multiple Special Practices","Max Volume Available (Pallets)":"10-20 pallets","value":1}],"index":4}],"index":2}]}
