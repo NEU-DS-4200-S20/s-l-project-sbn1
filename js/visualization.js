@@ -1,6 +1,6 @@
 ((() => {
   d3.json("data/new_vendors.json", (data) => {
-    d3.json("data/copy.json", (groupByBusiness) => {
+    d3.json("data/new_nested.json", (groupByBusiness) => {
       // General event type for selections, used by d3-dispatch
       // https://github.com/d3/d3-dispatch
       const dispatchString = "selectionUpdated";
