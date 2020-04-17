@@ -1,15 +1,16 @@
-# S-L Project Template
+# Project Team SBN1: Sustainable Business Network, DS 4200 S20
 
-This template will help you get started with your project. Please look through all these materials so you know how to organize your project.
+This project was made by Anika Rabenhorst, Samantha Roman</strong>, Gisselle Rodriguez Benitez, and Suraj Korumilli as a Service-Learning project for Northeastern University's DS4200: Information Presentation and Visualization class (https://canvas.instructure.com/courses/1781714). 
 
 ## The GitHub Pages Website
 
-Make sure you publish your project to github pages, and put the URL here: 
 https://neu-ds-4200-s20.github.io/s-l-project-sbn1/
 
-## Setup
+## Link to demo video 
 
-**Under no circumstances should you be editing files via the GitHub user interface.** Do all your edits locally after cloning the repository.
+inset link here lol
+
+## Setup
 
 1. Clone this repository to your local machine. E.g., in your terminal / command prompt `CD` to where you want this the folder for this activity to be. Then run `git clone <YOUR_REPO_URL>`
 
@@ -53,25 +54,3 @@ Each folder has an explanatory `README.md` file
   
 * `lib` will contain any JavaScript library you use. It currently includes D3.
 
-## Workflow
-
-As you work with your team, you may have issues merging your changes. We recommend you pick one member of the team to be the project manager and deal with merging any pull requests.
-
-Instead of all working directly out of the main `master` branch, you can try adopting a Git branching model for development. See, e.g., [this article by Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/) and the included image:
-
-![Image of Git branching model by VIncent Driessen](http://www.ccs.neu.edu/home/cody/courses/shared/git-model.png)
-
-## Grading
-
-Make sure to check these aspects of your work, which are important for every submission:
-
-* Coding was done properly:
-    * Your code was regularly committed and not edited via the GitHub user interface online.
-    * You have clear, commented, and validated code.
-    * Your web page loads properly and looks as expected in the latest Firefox and Chrome browsers.
-    * Any code from other sources (modified or copied straight) is acknowledged.
-
-* Your visualization works as required:
-    * Styles are consistent across views.
-    * None of the visualizations change size or move on the screen as you interact with them.
-    
