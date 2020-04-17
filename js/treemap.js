@@ -27,7 +27,6 @@ function treemap() {
         svg = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
         // Give the data to this cluster layout:
         var root = d3.hierarchy(data).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
 
@@ -45,7 +44,7 @@ function treemap() {
         var legColors = ["#66b447", "#9f2b68", "#f2b400"],
             legLabels = ["Non-Massachusetts Specialty Crop Farm", "Specialty Crop Value-Added Producer (50% or more specialty crop)", "Massachusetts Specialty Crop Farm"];
 
-        // tooltip
+        // create tooltip
         const tool = d3
             .select("body")
             .append("div")
@@ -63,9 +62,7 @@ function treemap() {
             .attr('width', function (d) { return d.x1 - d.x0; })
             .attr('height', function (d) { return d.y1 - d.y0; })
             .style("fill", (d) => color(d.parent.parent.data.name))
-
-
-            // from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
+            // tooltip from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
             .on("mousemove", function (d) {
                 tool.style("left", d3.event.pageX + 10 + "px")
                 tool.style("top", d3.event.pageY - 20 + "px")
@@ -73,10 +70,7 @@ function treemap() {
                 tool.html(function () {
                     return "<span>"  + "<b>Business Type: </b>" + "<br>" + d.data["Business Type"] + "<br>" + "<b>Product Type: </b>" + "<br>" + d.data["Product Category"] + "<br>" + "<b>Number of vendors: </b>" + "<br>" + d.data.value + "</span>";
                     })
-
-
-            })
-            .on("click", function (d) {
+            }).on("click", function (d) {
                 selection(d);
             }).on("mouseout", function (d) {
                 tool
@@ -85,63 +79,54 @@ function treemap() {
                     .style("opacity", 0);
             });
 
-        // .on("mousemove", (d, i) => {
-        //     tool
-        //       .transition()
-        //       .duration(0)
-        //       .style("opacity", 0.8);
-        //     tool
-        //       .attr("id", "tooltip")
-        //       .html(function() {
-        //       return "<span>" + "Number of vendors: " + d.data.value + "</span>";
-        //     })
-        //       .style("left", d3.event.pageX - 87.5 + "px") // -87.5 is half width of tooltip in css
-        //       .style("top", d3.event.pageY - 75 + "px")
-        //       .attr("data-value", d.data.value);
-        //   })
-        //    .on("mouseout", function(d) {
-        //     tool
-        //       .transition()
-        //       .duration(0)
-        //       .style("opacity", 0);
-        //    });
-
         // and to add the text labels
         svg
             .selectAll("text")
             .data(root.leaves())
             .enter()
             .append("text")
+            .on("mousemove", function (d) {
+                tool.style("left", d3.event.pageX + 10 + "px")
+                tool.style("top", d3.event.pageY - 20 + "px")
+                tool.style("opacity", 1);
+                tool.html(function () {
+                    return "<span>"  + "<b>Business Type: </b>" + "<br>" + d.data["Business Type"] + "<br>" + "<b>Product Type: </b>" + "<br>" + d.data["Product Category"] + "<br>" + "<b>Number of vendors: </b>" + "<br>" + d.data.value + "</span>";
+                    })
+            }).on("click", function (d) {
+                selection(d);
+            }).on("mouseout", function (d) {
+                tool
+                    .transition()
+                    .duration(0)
+                    .style("opacity", 0);
+            })
             .selectAll('tspan')
             .data(d => {
                 var t = d.data["Product Category"];
-                return t.split(" ") // split the text
+                return t.split(" ")     // split the text
                     .map(v => {
                         return {
                             text: v,
-                            x0: d.x0,                        // keep x0 reference
-                            y0: d.y0                         // keep y0 reference
+                            x0: d.x0,   // keep x0 reference
+                            y0: d.y0    // keep y0 reference
                         }
                     });
             })
-
-
-
             .enter()
             .append('tspan')
             .attr("x", (d) => d.x0 + 5)
             .attr("y", (d, i) => d.y0 + 15 + (i * 10))
             .text(function (d) { return d.text; })
             .attr("font-size", "10px")
-            .attr("fill", "white"); 
+            .attr("fill", "white")
+            // apply same tooltip to text labels
+            ; 
 
         // add legend http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929
-
         var legend = d3.select(selector).append("div").classed("legend-holder", true)
         .style("position", "relative")
         .style("width", 350 + "px")
         .style("height", 60 + "px");
-
         
         legend.append('div')
             .attr("class", "title")
@@ -159,7 +144,6 @@ function treemap() {
                 .text(function (d) { return legLabels[i] })
                 .style("background", function (d) { return legColors[i] })
         };
-
 
         var currentlySelected = [];
         function selection(treemap_selected) {  
@@ -216,7 +200,6 @@ function treemap() {
         dispatcher = k;
         return chart;
     };
-
 
     return chart;
 }
