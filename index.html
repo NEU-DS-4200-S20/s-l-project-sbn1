@@ -2,15 +2,16 @@
 <html lang="en">
 
 <!-- Metadata -->
+
 <head>
   <meta charset="utf-8">
-  
+
   <!-- Title -->
   <title>Project Team SBN1: Sustainable Business Network, DS 4200 S20</title>
-  
+
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
- 
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -23,203 +24,228 @@
 </head>
 
 <!-- Main page content -->
+
 <body>
 
   <!-- Update this with your GitHub repo URL -->
   <span id="forkongithub"><a href="https://github.com/NEU-DS-4200-S20/s-l-project-sbn1">Fork me on GitHub</a></span>
-  
+
   <!-- Your writeup goes here -->
-  <div class = "content-column">
-  
+  <div class="content-column">
+
     <h1>Project Team SBN1: Sustainable Business Network, DS 4200 S20</h1>
-    
+
     <p><strong>Anika Rabenhorst</strong>, <strong>Samantha Roman</strong>, <strong>Suraj Korumilli</strong>,
-    <strong>Gisselle Rodriguez Benitez</strong></p>
-    
-    <p>Service-Learning Course Project as part of <a href="https://canvas.instructure.com/courses/1781714">DS 4200: Information Presentation and Visualization</a>, taught by <a href="https://www.eecs.tufts.edu/~dcashm01/">Prof. Dylan Cashman</a>, <a href="https://visualization.khoury.northeastern.edu/">Data Visualization @ Khoury</a>, <a href="https://www.khoury.northeastern.edu/">Northeastern University</a>.</p>
-    
-    
+      <strong>Gisselle Rodriguez Benitez</strong></p>
+
+    <p>Service-Learning Course Project as part of <a href="https://canvas.instructure.com/courses/1781714">DS 4200:
+        Information Presentation and Visualization</a>, taught by <a href="https://www.eecs.tufts.edu/~dcashm01/">Prof.
+        Dylan Cashman</a>, <a href="https://visualization.khoury.northeastern.edu/">Data Visualization @ Khoury</a>, <a
+        href="https://www.khoury.northeastern.edu/">Northeastern University</a>.</p>
+
+
     <h1>Motivation</h1>
-    
-    <p>As stated in our team charter, our goal is to develop visualizations for the Sustainable Business 
-      Network’s Food Festival attendees, vendors, and/or planners. One of SBN’s goals is to increase the 
-      numbers of buyers present at the event. During our interview with the SBN representative, we learned 
-      that their strategy is to market the experience, opening up the festival to more food producers and 
-      consumers. In doing so, the organization noted the concerns and barriers that buyers face, including 
-      size/capacity and  certifications.  Keeping this in mind, the organization is striving to be inclusive 
-      of the size of both vendors and buyers. Aside from size and capacity, buyers are also looking for 
-      specific certifications or practices for the produce they are purchasing. As we’ll see in the data, 
-      this includes Organic Certification, GAP Certification, and focus on heirloom varieties or heritage 
-      breeds.</p> 
 
-    <p>The main take away from the interview was that SBN needed a visualization that allows for vendors 
-      to understand if the Food Festival is what they are looking for. This leads us to a few guiding questions. 
-      How do we show potential buyers what vendors are present? How do we visualize information about vendors? 
+    <p>As stated in our team charter, our goal is to develop visualizations for the Sustainable Business
+      Network’s Food Festival attendees, vendors, and/or planners. One of SBN’s goals is to increase the
+      numbers of buyers present at the event. During our interview with the SBN representative, we learned
+      that their strategy is to market the experience, opening up the festival to more food producers and
+      consumers. In doing so, the organization noted the concerns and barriers that buyers face, including
+      size/capacity and certifications. Keeping this in mind, the organization is striving to be inclusive
+      of the size of both vendors and buyers. Aside from size and capacity, buyers are also looking for
+      specific certifications or practices for the produce they are purchasing. As we’ll see in the data,
+      this includes Organic Certification, GAP Certification, and focus on heirloom varieties or heritage
+      breeds.</p>
+
+    <p>The main take away from the interview was that SBN needed a visualization that allows for vendors
+      to understand if the Food Festival is what they are looking for. This leads us to a few guiding questions.
+      How do we show potential buyers what vendors are present? How do we visualize information about vendors?
       Specifically, what can we do to represent the capacities and certifications of the vendors?</p>
-      
 
-    
+
+
     <h1>Visualization</h1>
-    
+
+    <p>Interact with the treemap below to see which vendors will be attending SBN’s Local Food & Specialty Crop Trade Show.
+      Hover your mouse over the cells to show more information, like the total number of vendors within a category.
+      Click on the cells to filter the table below so that it only shows the vendors within that category—you can
+      select and unselect multiple cells to apply different table filters.</p>
+
   </div>
-  
+
   <!-- Your visualization here -->
   <div class="vis-holder">
     <div class="treemap-holder" id="treemap">
-      
+
     </div>
-    <div class="table-holder" id="table"></div>  
+    <div class="table-holder" id="table"></div>
   </div>
 
   <!-- Your writeup goes here -->
-  <div class = "content-column">
+  <div class="content-column">
 
     <h1>Demo Video</h1>
-    
-    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
-    
+
+    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody
+        Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
+
     <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
-       a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
+        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a>
+        instead.</p>
     </video>
 
-    <h1>Visualization explanation</h1>
-    
-    <p>Our visualization aims to display trade show vendor attendees in a hierarchical format. We have a scrollable table (which shows all relevant vendor details) and a singular implementation of the treemap (which groups and orders vendors by certain categories). Vendors listed in the table are represented in the grouped treemap cells; the area of each cell depicts how many vendors fall into a specified category. This information is currently grouped by "Type of Business" followed by "Product Category." A legend depicts which colors correspond to each business type; these colors were chosen to go along with food/crop colors that are commonly associated with fresh crops and farmers markets.</p>
+    <h1>Visualization Explanation</h1>
 
-      <p>For details on demand, hovering over a treemap cell displays all information for that cell within a tooltip: business type, 
-      product type, and total number of vendors. This prevents the treemap cells from showing too much text at once if it is not desired.
-      The treemap and table are also interactive and linked to one another. Clicking on treemap cells filters the table so that only the 
-      vendors that fall within that category are shown. Clicking additional cells adds them to the filter, and clicking on already-selected
+    <p>Our visualization aims to display trade show vendor attendees in a hierarchical format. We have a scrollable
+      table (which shows all relevant vendor details) and a singular implementation of the treemap (which groups and
+      orders vendors by certain categories). Vendors listed in the table are represented in the grouped treemap cells;
+      the area of each cell depicts how many vendors fall into a specified category. This information is currently
+      grouped by "Type of Business" followed by "Product Category." A legend depicts which colors correspond to each
+      business type; these colors were chosen to go along with food/crop colors that are commonly associated with fresh
+      crops and farmers markets.</p>
+
+    <p>For details on demand, hovering over a treemap cell displays all information for that cell within a tooltip:
+      business type,
+      product type, and total number of vendors. This prevents the treemap cells from showing too much text at once if
+      it is not desired.
+      The treemap and table are also interactive and linked to one another. Clicking on treemap cells filters the table
+      so that only the
+      vendors that fall within that category are shown. Clicking additional cells adds them to the filter, and clicking
+      on already-selected
       cells removes them from the filter.</p>
 
 
     <h1>Data Analysis</h1>
-    <p>There were three separate datasets provided to us from SBN. One CSV contained information about the buyers. 
+    <p>There were three separate datasets provided to us from SBN. One CSV contained information about the buyers.
       Two CSVs contained data from the vendors, separated by whether the vendor had specialty items. </p>
 
-    <p>Our project focused on the specialty vendor data. This dataset contained 20 fields and 34 entries. 
-      The fields included categorical values like position of the person filling out the application, the 
-      type of business, certifications/special practices, and types of products and crops; ordinal values 
-      like the volume produced and the volume of capacity to sell to new accounts; and continuous quantitative 
+    <p>Our project focused on the specialty vendor data. This dataset contained 20 fields and 34 entries.
+      The fields included categorical values like position of the person filling out the application, the
+      type of business, certifications/special practices, and types of products and crops; ordinal values
+      like the volume produced and the volume of capacity to sell to new accounts; and continuous quantitative
       values like percent of products sold to wholesale and goal percent of products sold to wholesale. </p>
 
-    <p>Once we decided on the principal visualization we were creating, a tree-map, we added additional 
-      fields to aggregate and/or summarize certain fields. Specifically, we categorized the crops and products 
-      into “plants”, “produce”, and “value-added products”, combinations of those categories, and “other”. 
-      Similarly, we limited the number of different values in the certifications field. We categorized items 
-      if they had multiple certifications, and otherwise kept other values including singular certifications, 
-      “other”, and “not applicable”. We needed to add these two fields to avoid excessively small areas in 
-      our tree-map resulting from the various combinations of products and of certifications. We also wanted 
-      to aggregate the data from the capacities that vendors were willing to take on from new buyers. 
-      Instead of having each season be a level within the hierarchy, we made an aggregate field that showed 
+    <p>Once we decided on the principal visualization we were creating, a tree-map, we added additional
+      fields to aggregate and/or summarize certain fields. Specifically, we categorized the crops and products
+      into “plants”, “produce”, and “value-added products”, combinations of those categories, and “other”.
+      Similarly, we limited the number of different values in the certifications field. We categorized items
+      if they had multiple certifications, and otherwise kept other values including singular certifications,
+      “other”, and “not applicable”. We needed to add these two fields to avoid excessively small areas in
+      our tree-map resulting from the various combinations of products and of certifications. We also wanted
+      to aggregate the data from the capacities that vendors were willing to take on from new buyers.
+      Instead of having each season be a level within the hierarchy, we made an aggregate field that showed
       the max amount a vendor was capable of within a season.</p>
 
     <h1>Task Analysis</h1>
 
-    <p>Sustainable Business Network is looking for a visualization that will give suppliers and buyers an 
-      idea of whether they want to take part in the trade show. Summarizing and presenting the registration 
-      data will encourage trade show attendance by informing attendees about vendors. The primary consumer 
-      of the visualization would be those who are thinking about attending the trade show. SBN wants to 
+    <p>Sustainable Business Network is looking for a visualization that will give suppliers and buyers an
+      idea of whether they want to take part in the trade show. Summarizing and presenting the registration
+      data will encourage trade show attendance by informing attendees about vendors. The primary consumer
+      of the visualization would be those who are thinking about attending the trade show. SBN wants to
       attract more buyers by visualizing the vendor information.</p>
 
-    <p>Before we decided the specific visualization we were creating, we looked at the various potential 
-      tasks. The most important domain task was to categorize vendors by types of food they produce, the size 
-      of their farm, and the certifications they have. To do this, we have summarized the data as the 
-      analytical task, allow for the user to browse the data as the search task, and present this in our 
-      tree-map and linked table as the analyze task. The completion of this task would also aid in the goals 
-      of our second domain task: analyzing what types of vendors were unrepresented and what foods buyers 
-      were looking for. The goals of this task were to identify the categories and to provide the user 
-      capabilities to locate and derive information from what is missing. Because this information isn’t 
-      explicitly given to us, the process for addressing this domain task was based more on what isn’t shown 
-      in the visualization. A vendor can look at the visualization and realize that nobody else currently in 
+    <p>Before we decided the specific visualization we were creating, we looked at the various potential
+      tasks. The most important domain task was to categorize vendors by types of food they produce, the size
+      of their farm, and the certifications they have. To do this, we have summarized the data as the
+      analytical task, allow for the user to browse the data as the search task, and present this in our
+      tree-map and linked table as the analyze task. The completion of this task would also aid in the goals
+      of our second domain task: analyzing what types of vendors were unrepresented and what foods buyers
+      were looking for. The goals of this task were to identify the categories and to provide the user
+      capabilities to locate and derive information from what is missing. Because this information isn’t
+      explicitly given to us, the process for addressing this domain task was based more on what isn’t shown
+      in the visualization. A vendor can look at the visualization and realize that nobody else currently in
       the trade show hits the same niche. This can make a vendor more inclined to apply next year.</p>
 
-    <p>We had two other domain tasks that did not get represented by our visualization due to our focus on 
-      vendors. One task was to classify buyers by consumption (quantity and type). To do this we would need 
-      to summarize the data, provide browsing ability, and present this in our visualization. A third task 
-      was to visualize the location of vendors. This required comparing the values, providing browsing 
+    <p>We had two other domain tasks that did not get represented by our visualization due to our focus on
+      vendors. One task was to classify buyers by consumption (quantity and type). To do this we would need
+      to summarize the data, provide browsing ability, and present this in our visualization. A third task
+      was to visualize the location of vendors. This required comparing the values, providing browsing
       ability, and presenting this in our visualization.</p>
     <h1>Design Process</h1>
-    
-      <p>Our design process was split into these major iterations - a tableau Exploration, hand drawn sketches of  
-        our visualization, and a digitally sketched visualization with a lot of detail, usability testing 
-        and editing our visualization, and then the final visualization. </p>
 
-    <p>Before we were fully accustomed to our data and the project, we were tasked with combing through 
-      our data in Tableau to gain a further understanding of our data. Here we created several types of 
-      visualizations to try to fulfill the tasks we created in our task analysis section. We mostly 
-      created simple visualizations such as bar charts which plotted businesses to the amount of food 
+    <p>Our design process was split into these major iterations - a tableau Exploration, hand drawn sketches of
+      our visualization, and a digitally sketched visualization with a lot of detail, usability testing
+      and editing our visualization, and then the final visualization. </p>
+
+    <p>Before we were fully accustomed to our data and the project, we were tasked with combing through
+      our data in Tableau to gain a further understanding of our data. Here we created several types of
+      visualizations to try to fulfill the tasks we created in our task analysis section. We mostly
+      created simple visualizations such as bar charts which plotted businesses to the amount of food
       they can provide, or a table showing business types.</p>
-  
-    <p>The second iteration of sketches were hand drawn. During this iteration, more of an emphasis 
+
+    <p>The second iteration of sketches were hand drawn. During this iteration, more of an emphasis
       was placed on creating a visualization with proper design choices that we learned in class.</p>
 
     <p><img src="images/design_process/sketch.PNG" width="600"></p>
     <p><b>Figure 1.</b> Hand drawn sketch of visualization.</p>
 
-    <p>The third iteration of our visualization was a digitally sketched version using a combination 
-      of figma, tableau, and excel with a detailed explanation of how we expect our visualization to 
-      work. During this section, we created the specific filters (such as food category, farm category, 
-      pallet capacity, etc.) that our visualization would have as well as how brushing and linking would 
-      change the view of our visualization step-by-step. To see more specifications, look at figure 2 
+    <p>The third iteration of our visualization was a digitally sketched version using a combination
+      of figma, tableau, and excel with a detailed explanation of how we expect our visualization to
+      work. During this section, we created the specific filters (such as food category, farm category,
+      pallet capacity, etc.) that our visualization would have as well as how brushing and linking would
+      change the view of our visualization step-by-step. To see more specifications, look at figure 2
       in the visualization section.</p>
 
     <p><img src="images/design_process/final.PNG" width="600"></p>
     <p><b>Figure 2.</b> Digitally-created final design sketch.</p>
 
     <p>Our fourth and fifth versions of our visualizations were created by coding it through Javascript.
-       For the most part, we were able to bring to life our sketches in part 3, but we had some 
-       difficulty implementing interactive and brushing and linking. After the fourth version, we 
-       conducted a usability test in class, and realized that our visualization was neither as clear 
-       nor as easy to use as we anticipated. Several key takeaways we took away was that we needed to 
-       make it easier for people unfamiliar with the data understand the data better (we did this by 
-       creating understandable category names, changing text in our data to be more concise, and getting
-        rid of unimportant data), we needed to make the visualization look better (we eventually made 
-        the treemap and corresponding table smaller so that it was easier on the eye), and we needed to 
-        improve our brushing and linking (we did this by having a tooltip that that hovers over the tree 
-        map, and adding additional linking to our treemap and table). Our fifth version (Sprint 2) is where we 
-        made these changes.</p>
+      For the most part, we were able to bring to life our sketches in part 3, but we had some
+      difficulty implementing interactive and brushing and linking. After the fourth version, we
+      conducted a usability test in class, and realized that our visualization was neither as clear
+      nor as easy to use as we anticipated. Several key takeaways we took away was that we needed to
+      make it easier for people unfamiliar with the data understand the data better (we did this by
+      creating understandable category names, changing text in our data to be more concise, and getting
+      rid of unimportant data), we needed to make the visualization look better (we eventually made
+      the treemap and corresponding table smaller so that it was easier on the eye), and we needed to
+      improve our brushing and linking (we did this by having a tooltip that that hovers over the tree
+      map, and adding additional linking to our treemap and table). Our fifth version (Sprint 2) is where we
+      made these changes.</p>
 
     <h1>Conclusion</h1>
 
-    <p>Overall, our group did the best we could considering the constraints we had - learning a new 
-      programming language, figuring out how to handle working remotely - and I believe we did well! 
-      The biggest takeaway from this project was that we learned the whole design thinking for how to 
-      create a useful visualization. We went through the process of interviewing a partner, understanding 
-      the problem at hand, brainstorming how to solve the problem, receiving a dataset, exploring a 
-      dataset, creating several mock sketches and then creating an even more detailed sketch, completing 
-      several digitally coded versions as well going through usability test, and then eventually 
-      presenting our project to our instructors and partners. The coding portion really only lasted about 
-      two weeks, but the rest of the project lasted months - this showed us the value of thorough 
+    <p>Overall, our group did the best we could considering the constraints we had - learning a new
+      programming language, figuring out how to handle working remotely - and I believe we did well!
+      The biggest takeaway from this project was that we learned the whole design thinking for how to
+      create a useful visualization. We went through the process of interviewing a partner, understanding
+      the problem at hand, brainstorming how to solve the problem, receiving a dataset, exploring a
+      dataset, creating several mock sketches and then creating an even more detailed sketch, completing
+      several digitally coded versions as well going through usability test, and then eventually
+      presenting our project to our instructors and partners. The coding portion really only lasted about
+      two weeks, but the rest of the project lasted months - this showed us the value of thorough
       planning and interacting with a client. </p>
-    
-    <p>Some things our group wished we would have done was have more interaction with the group we are 
-      creating the visualization for, specifically the Sustainable Business Network (SBN). While we 
-      understand there were constraints, as SBN had many groups and would be unable to meet with so 
-      many students, we also felt disconnected from the organization, as we only met our partners in 
-      person once for an interview. One other thing we also wish was that we had more usability testing 
-      sessions. We received a lot of insight from the usability testing session that made our visualization 
-      significantly better, and we would have loved to done more testing for the several iterations of our 
-      visualization. A future goal of the project would be implementing the user chosen treemap where 
+
+    <p>Some things our group wished we would have done was have more interaction with the group we are
+      creating the visualization for, specifically the Sustainable Business Network (SBN). While we
+      understand there were constraints, as SBN had many groups and would be unable to meet with so
+      many students, we also felt disconnected from the organization, as we only met our partners in
+      person once for an interview. One other thing we also wish was that we had more usability testing
+      sessions. We received a lot of insight from the usability testing session that made our visualization
+      significantly better, and we would have loved to done more testing for the several iterations of our
+      visualization. A future goal of the project would be implementing the user chosen treemap where
       they get to decide the hierarchy as we originally planned.</p>
 
-    <p>We really enjoyed this project, and we are confident the skills learned from this project will 
-      translate to the future! We had a blast working with our group mates, working with our partners, 
-      and communicating with the teaching staff, and we look forward to applying our newfound knowledge 
+    <p>We really enjoyed this project, and we are confident the skills learned from this project will
+      translate to the future! We had a blast working with our group mates, working with our partners,
+      and communicating with the teaching staff, and we look forward to applying our newfound knowledge
       of data visualization in the future!</p>
-    
+
     <h1>Acknowledgments</h1>
 
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-    
+    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em>
+    </p>
+
     <ul>
-      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
+          ribbon</a> by Chris Heilmann.</li>
       <li><a href="http://github.com/iros/underscore.nest/">Underscore.Nest</a> by Irene Ros.</li>
-      <li><a href="https://underscorejs.org">Underscore.js Javascript Library</a> by Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors.</li>
+      <li><a href="https://underscorejs.org">Underscore.js Javascript Library</a> by Jeremy Ashkenas, DocumentCloud and
+        Investigative Reporters & Editors.</li>
       <li><a href="http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929">Treemap with Tooltip</a> by Nathan Dobie.</li>
-      <li><a href="https://www.d3-graph-gallery.com/graph/treemap_json.html">Treemap from Json format in d3.js</a> by Yan Holtz.</li>
+      <li><a href="https://www.d3-graph-gallery.com/graph/treemap_json.html">Treemap from Json format in d3.js</a> by
+        Yan Holtz.</li>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock. In particular:
         <ul>
           <li><a href="https://github.com/d3/d3-dispatch">d3-dispatch</a>, which lets you register named callbacks and
@@ -227,16 +253,17 @@
         </ul>
       </li>
     </ul>
-    
+
   </div>
-  
+
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
 
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="lib/require.js"></script>
-  <script src="js/table.js"></script>  
+  <script src="js/table.js"></script>
   <script src="js/treemap.js"></script>
   <script src="js/visualization.js"></script>
 
-  </body>
+</body>
+
 </html>
