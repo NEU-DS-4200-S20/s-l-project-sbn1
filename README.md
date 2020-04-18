@@ -8,7 +8,7 @@ https://neu-ds-4200-s20.github.io/s-l-project-sbn1/
 
 ## Link to demo video 
 
-inset link here lol
+https://drive.google.com/open?id=1NW5MTK24EelX3ZgIW7JO1y7sj3T5EsJX
 
 ## Setup
 
