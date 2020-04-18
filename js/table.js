@@ -32,7 +32,7 @@ function table() {
 
         // add a row for each row of the data
         let tableBody = table.append("tbody");
-        var rows = tableBody
+        let rows = tableBody
             .selectAll("tr")
             .data(data)
             .enter()
@@ -41,7 +41,8 @@ function table() {
                 return "id" + d["Vendor Name"];
             });
         
-        var cells = rows
+        // adds each cell to the rows
+        let cells = rows
             .selectAll('td')
             .data(function (row) {
                 return tableHeaders.map(function (column) {
@@ -54,55 +55,15 @@ function table() {
                 return d.value;
             });
 
-        // // Then, add code to allow for brushing.  Note, this is handled differently
-        // // than the line chart and scatter plot because we are not using an SVG.
-        // // Look at the readme of the assignment for hints.
-        // // Note: you'll also have to implement linking in the updateSelection function
-        // // at the bottom of this function.
-        // // Remember that you have to dispatch that an object was highlighted.  Look
-        // // in linechart.js and scatterplot.js to see how to interact with the dispatcher.
-        // rows.on("mouseover", selectRow).on("mousemove", selectRow);
-
-        // table.on("mouseLeave", endSelection);
-
-        // function selectRow() {
-        //     d3.select(this).attr("class", "selected");
-
-        //     let dispatchString = Object.getOwnPropertyNames(dispatcher.k)[0];
-
-        //     dispatcher.call(
-        //         dispatchString,
-        //         this,
-        //         tableBody.selectAll(".selected").data()
-        //     );
-        // }
-
-        // function endSelection() {
-        //     let dispatchString = Object.getOwnPropertyNames(dispatcher.k)[0];
-        //     tableBody.selectAll(".selected").attr("class", "");
-        //     dispatcher.call(dispatchString, this, []);
-        // }
-
         return chart;
     }
 
-    // Gets or sets the dispatcher we use for selection events
+    //Gets or sets the dispatcher we use for selection events
     chart.selectionDispatcher = function (k) {
         if (!arguments.length) return dispatcher;
         dispatcher = k;
         return chart;
     };
-
-    // // Given selected data from another visualization 
-    // // select the relevant elements here (linking)
-    // chart.updateSelection = function (selectedData) {
-    //     if (!arguments.length) return;
-
-    //     // Select an element if its datum was selected
-    //     d3.selectAll('tr').classed("selected", d => {
-    //         return selectedData.includes(d)
-    //     });
-    // };
 
     return chart;
 }
